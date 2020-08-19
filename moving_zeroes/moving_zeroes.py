@@ -2,10 +2,17 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def moving_zeroes(arr):
-    # Your code here
 
-    pass
+
+def moving_zeroes(arr):
+    rtn = []
+    for i in arr:
+        if i == 0:
+            rtn.append(i)
+        else:
+            rtn.insert(0, i)
+    return rtn
+# Maybe improve with sets -> Current complexity = O(n)
 
 
 if __name__ == '__main__':
